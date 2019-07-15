@@ -2,6 +2,9 @@
 
 This is a ros package for a 6DOF robotic arm which is able to pick and place objects.
 
+This project is built in ROS Kinetic.
+
+
 # Instructions for use with gazebo :
 
 Start Gazebo using the following command:
@@ -22,6 +25,7 @@ This uses the demo.launch file made by moveit setup assistant. The arduino subsc
 This solution is a bit hacky and not how it is done with industrial robots. Ideally you are supposed to publish the movement trajectory on /FollowJointState topic and then receive the feedback on /JointState topic.But in our arm the hobby servos can't provide the feedback, so we'll just directly subscribe to /JointState topic, published by FakeRobotController node.
 
 1) launch demo.launch
+
 2)in a new terminal type the following :
 
     sudo chmod -R 777 /dev/ttyUSB0
